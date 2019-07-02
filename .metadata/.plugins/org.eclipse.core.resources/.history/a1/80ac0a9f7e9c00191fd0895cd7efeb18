@@ -1,0 +1,13 @@
+package com.moorthy.web;
+
+import org.springframework.web.bind.annotation.RestController;
+
+@RestController
+public class CustomerController {
+	
+	@Autowired
+	private CustomerRepository customerRepository;
+	
+	@RequestMapping(value="/customer", method=RequestMethod.PUT)
+
+}

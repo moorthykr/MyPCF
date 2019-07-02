@@ -1,0 +1,5 @@
+package com.moorthy.web;
+
+public class CustomerController {
+
+}

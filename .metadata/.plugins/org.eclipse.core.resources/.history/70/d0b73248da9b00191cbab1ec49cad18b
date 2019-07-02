@@ -1,0 +1,6 @@
+package com.moorthy.model;
+
+@Component
+public class Customer {
+
+}

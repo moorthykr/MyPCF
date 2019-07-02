@@ -1,0 +1,26 @@
+package com.moorthy.web;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.web.bind.annotation.RestController;
+
+import com.moorthy.model.Customer;
+import com.moorthy.model.CustomerRepository;
+
+@RestController
+public class CustomerController {
+	
+	@Autowired
+	private CustomerRepository customerRepository;
+	
+	@RequestMapping(value="/customer", method=RequestMethod.PUT)
+	public String putCustomer(@RequestBody Customer customer) {
+		Customer savedCustomer = customerRepository.save(customer);
+		return savedCustomer.toString();
+	}
+	
+	@RequestMapping(value="/customer", method=RequestMethod.GET)
+	public String getCustomer (@RequestParam String lastName) {
+		return customerRepository.findByLastName(lastName).toString();
+	}
+
+}

@@ -1,0 +1,5 @@
+package com.moorthy.model;
+
+public class CustomerRepository {
+
+}

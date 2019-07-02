@@ -1,0 +1,6 @@
+package com.moorthy.model;
+
+@Entity
+public class Customer {
+
+}
